@@ -1,0 +1,31 @@
+{
+  "name": "playdate",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "start": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bojsteiner/playdate-project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bojsteiner/playdate-project/issues"
+  },
+  "homepage": "https://github.com/bojsteiner/playdate-project#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "ejs": "^3.1.10",
+    "express": "^4.21.2",
+    "nodemon": "^3.1.9",
+    "sequelize": "^6.37.6",
+    "sequelize-cli": "^6.6.2",
+    "sqlite3": "^5.1.7"
+  }
+}

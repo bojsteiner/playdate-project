@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Playdate</title>
+        <link rel="stylesheet" href="/css/index.css">
+        <script type="module" src="/js/index.js"></script>
+    </head>
+    <body>
+        <div id="top-bar">
+            <div id="bar-content">
+                <div id="nav-bar">
+                    <span class="nav-item"><a href="./parks">Parks</a></span>
+                    <span class="nav-toggle hidden" id="parks-toggle">
+                        <div class="menu" id="parks-menu">
+                            <ul>
+                                <li>Playgrounds</li>
+                                <li>Open Fields</li>
+                                <li>Indoor Play Places</li>
+                            </ul>
+                        </div>
+                        +
+                    </span>
+                
+                    <span class="nav-item"><a href="#">Attractions</a></span>
+                    <span class="nav-toggle hidden" id="attractions-toggle">
+                        <div class="menu" id="attractions-menu">
+                            <ul>
+                                <li>Museums</li>
+                                <li>Zoos</li>
+                                <li>Hikes</li>
+                                <li>Theme Parks</li>
+                                <li>Landmarks</li>
+                            </ul>
+                        </div>
+                        +
+                    </span>
+                    <span class="nav-item"><a href='#'>Events</a></span>
+                    <span class="nav-toggle">+</span>
+                    <span class="nav-item"><a href='#'>At-home</a></span>
+                </div>
+                
+                <div id="header-logo">
+                    <span>LOGO PLACEHOLDER</span>
+                </div>
+            </div>
+        </div>
+        <section id="search-section">
+            <h1>What's your next play?</h1>
+            <form id="search-bar">
+                <input type="text" placeholder="parks, museums, zoos, indoor play, etc." id="search-content">
+                <input type="text" placeholder="location" id="search-location">
+                <button type="submit">Search</button>
+            </form>
+        </section>
+        <section id="cards-section"></section>
+    </body>
+</html>

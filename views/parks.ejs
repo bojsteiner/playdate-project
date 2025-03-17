@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Parks</title>
+    <link rel="stylesheet" href="/css/index.css">
+    <script type="module" src="/js/index.js"></script>
+</head>
+<body>
+    <div id="top-bar">
+        <div id="bar-content">
+            <div id="nav-bar">
+                <span class="nav-item"><a href="./parks">Parks</a></span>
+                <span class="nav-toggle hidden" id="parks-toggle">
+                    <div class="menu" id="parks-menu">
+                        <ul>
+                            <li>Playgrounds</li>
+                            <li>Open Fields</li>
+                            <li>Indoor Play Places</li>
+                        </ul>
+                    </div>
+                    +
+                </span>
+            
+                <span class="nav-item"><a href="#">Attractions</a></span>
+                <span class="nav-toggle hidden" id="attractions-toggle">
+                    <div class="menu" id="attractions-menu">
+                        <ul>
+                            <li>Museums</li>
+                            <li>Zoos</li>
+                            <li>Hikes</li>
+                            <li>Theme Parks</li>
+                            <li>Landmarks</li>
+                        </ul>
+                    </div>
+                    +
+                </span>
+                <span class="nav-item"><a href='#'>Events</a></span>
+                <span class="nav-toggle">+</span>
+                <span class="nav-item"><a href='#'>At-home</a></span>
+            </div>
+            
+            <div id="header-logo">
+                <span>LOGO PLACEHOLDER</span>
+            </div>
+        </div>
+    </div>
+    <h1>List of Parks</h1>
+    <div class="filter-list">
+        <form class="filter-form" action="/parks" method="GET">
+            <label for="enclosed">Enclosed:</label>
+            <input type="checkbox" id="enclosed" name="enclosed" value="true" <%= enclosed ? "checked" : "" %>>
+          
+            <label for="bathrooms">Bathrooms:</label>
+            <input type="checkbox" id="bathrooms" name="bathrooms" value="true" <%= bathrooms ? "checked" : "" %>>
+          
+            <button type="submit">Filter</button>
+        </form>
+
+
+        <div class="result-list">
+            <% parks.forEach(park => { %>
+                <section class="park-row">
+                    <h2 class="park-name"><%= park.name %></h2>
+                    <div class="park-pic-info">
+                        <img class="park-thumbnail" src="<%= park.imageUrl %>" alt="<%= park.name %>" />
+                        <div class="park-info">
+                            <p><%= park.address %></p>
+                            <div class="park-filter-fields">
+                                <p>Enclosed? <%=park.enclosed %></p>
+                                <p>Bathrooms? <%=park.bathrooms %></p>
+                                <p>Shade? <%=park.shade %></p>
+                                <p>Parking? <%=park.parking %></p>
+                                <p>Young Kids Area? <%=park.youngKidsArea %></p>
+                            </div>
+                         </div>
+                    </div>
+                </section>
+            <% }) %>
+        </div>
+        
+    </div>
+    
+</body>
+</html>
