@@ -4,9 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js",
-    "start": "node app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently \"npm run server\" \"npm run client\"",
+    "server": "nodemon app.js",
+    "client": "cd client && npm run dev"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/bojsteiner/playdate-project#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "ejs": "^3.1.10",
     "express": "^4.21.2",
@@ -27,5 +28,8 @@
     "sequelize": "^6.37.6",
     "sequelize-cli": "^6.6.2",
     "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2"
   }
 }

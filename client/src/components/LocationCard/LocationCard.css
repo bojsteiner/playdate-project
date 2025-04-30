@@ -1,0 +1,15 @@
+.card .row .card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    
+}
+
+.results-list .card-content {
+    background-color: #c9d7cf56;
+    border-radius: 8px;
+}
+
+.card {
+    margin-top: 20px;
+}

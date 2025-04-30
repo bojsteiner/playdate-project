@@ -1,0 +1,28 @@
+.navbar {
+    background-color: #fff8e9;
+    font-family: 'Quicksand', sans-serif;
+    padding: 1.5rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    height: 80px;
+  }
+  
+  .navbar-nav .nav-link {
+    color: #2c3e50;
+    font-weight: 800;
+    font-size: 18px;
+    margin-right: 1rem;
+  }
+  
+  .nav-link:hover {
+    color: #f97668 !important;
+    text-decoration: underline;
+    font-weight: 800;
+  }
+  
+  .navbar-brand img {
+    width: 80px;
+    height: 70px;
+    border-radius: 20%;
+    object-fit: contain;
+  }
